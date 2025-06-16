@@ -1,11 +1,11 @@
-package com.example.persistence.Model.database.entities
+package com.example.persistence.model.database.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 
 @Entity
-data class ListEntry(
+data class Todo(
     val name: String,
     val completed: Boolean = false,
     @PrimaryKey(autoGenerate = true)

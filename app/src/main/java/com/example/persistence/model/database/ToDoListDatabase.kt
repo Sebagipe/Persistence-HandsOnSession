@@ -1,13 +1,13 @@
-package com.example.persistence.Model.database
+package com.example.persistence.model.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.persistence.Model.database.daos.ToDoListDao
-import com.example.persistence.Model.database.entities.ListEntry
+import com.example.persistence.model.database.daos.ToDoListDao
+import com.example.persistence.model.database.entities.Todo
 
-@Database(version = 1, entities = [ListEntry::class])
+@Database(version = 1, entities = [Todo::class])
 abstract class ToDoListDatabase : RoomDatabase() {
     abstract val dao: ToDoListDao
 
