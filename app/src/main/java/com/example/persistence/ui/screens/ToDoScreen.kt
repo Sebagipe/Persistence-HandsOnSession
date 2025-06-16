@@ -18,6 +18,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -35,8 +36,9 @@ fun ToDoScreen(
     modifier: Modifier = Modifier,
     viewModel: ToDoViewModel = viewModel<ToDoViewModel>(),
 ) {
-    val incompleteEntries by viewModel.incompleteEntries.collectAsStateWithLifecycle(emptyList())
-    val completedEntries by viewModel.completedEntries.collectAsStateWithLifecycle(emptyList())
+    //TODO 5
+    val incompleteEntries by viewModel.incompleteEntries.observeAsState(emptyList())
+    val completedEntries by viewModel.completedEntries.observeAsState(emptyList())
 
     ToDoScreen(
         modifier,
