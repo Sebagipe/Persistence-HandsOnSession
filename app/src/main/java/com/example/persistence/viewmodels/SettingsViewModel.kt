@@ -16,18 +16,14 @@ class SettingsViewModel(
 
     fun isAlwaysOnDisplay() = dataStore.alwaysOnScreenFlow
 
+
     fun setAlwaysOnDisplay (enabled : Boolean)  {
-        viewModelScope.launch (Dispatchers.IO) {
-            dataStore.setAlwaysOnScreen(enabled)
-        }
+        //TODO 2a: Rufe Methode auf, zur Veränderung des gespeicherten Wertes im DataStore für alwaysOnScreen
+        // Wichtig!!! suspend Funktionen können nicht in der main-Thread ausgeführt werden (und sollen natürlich auch nicht)
     }
 
-    fun isDarkTheme() = dataStore.darkThemeFlow
-
-    fun setDarkTheme(enabled: Boolean) {
-        viewModelScope.launch (Dispatchers.IO) {
-            dataStore.setDarkTheme(enabled)
-        }
-    }
+    // TODO 2b: Definiere die Notwendige Funktionen zur Zugriff auf dark Theme über den viewModel
+    fun isDarkTheme()
+    fun setDarkTheme(enabled: Boolean) {}
 
 }

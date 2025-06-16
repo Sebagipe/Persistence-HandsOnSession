@@ -24,7 +24,7 @@ fun SettingsScreen(
     viewModel: SettingsViewModel = viewModel<SettingsViewModel>(),
 ) {
     val alwaysOn by viewModel.isAlwaysOnDisplay().collectAsState(false)
-    val darkTheme by viewModel.isDarkTheme().collectAsState(false)
+    val darkTheme by  // TODO 3
     SettingsScreen(modifier, alwaysOn, darkTheme, onAlwaysOnChange = {
         viewModel.setAlwaysOnDisplay(!alwaysOn)
     }, onDarkThemeChange = {

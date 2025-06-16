@@ -39,9 +39,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             // Settings
-            val isAlwaysOnScreen by settingsViewModel.isAlwaysOnDisplay()
-                .collectAsStateWithLifecycle(false)
-            val darkTheme by settingsViewModel.isDarkTheme().collectAsStateWithLifecycle(false)
+            val isAlwaysOnScreen by settingsViewModel.isAlwaysOnDisplay().collectAsStateWithLifecycle(false)
+            val darkTheme ... // TODO 4
 
             // Actually setting alwaysOnScreen on and off
             if (isAlwaysOnScreen) window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
