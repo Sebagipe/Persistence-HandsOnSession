@@ -36,7 +36,8 @@ fun ToDoScreen(
     modifier: Modifier = Modifier,
     viewModel: ToDoViewModel = viewModel<ToDoViewModel>(),
 ) {
-    //TODO 5: Greife hier auf die Einträge in der Datenkbank über den ViewModel (Hinweis: LiveData)
+    //TODO 5: Greife hier auf die Einträge in der Datenkbank über den ViewModel,
+    // sodass die dynamisch bei der UI angezeigt werden können (Hinweis: LiveData)
     val incompleteEntries by //..
     val completedEntries by //..
 

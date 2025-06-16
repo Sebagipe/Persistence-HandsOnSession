@@ -21,7 +21,7 @@ class ToDoViewModel(app: Application) : AndroidViewModel(app) {
     fun saveEntry(name: String) {
         val newEntry = ...//TODO 4c:
         viewModelScope.launch(Dispatchers.IO) {
-            //TODO 4d: Rufe hier die Funktion auf, womit neu Todos in der Datenbank eingefügt werden können
+            //TODO 4d: Rufe hier die Funktion auf, womit neu Todos in der Datenbank eingefügt werden können.
             // Hinweis zur Verständnis: viewModelScope.launch {} startet eine Coroutine. Alles was innerhalb der
             // geschweigte Klammern passiert, wird in einen anderen Thread ausgeführt. Dadurch wird kein
             // Datenbankzugriff auf der Main-Thread ausgeführt
@@ -30,7 +30,7 @@ class ToDoViewModel(app: Application) : AndroidViewModel(app) {
 
     fun deleteEntry(entry: Todo) {
         viewModelScope.launch(Dispatchers.IO) {
-            // TODO 4e: Rufe hier die richtige Funktion auf, womit Todos von der Datenbank entfernt werden
+            // TODO 4e: Rufe hier die Funktion auf, womit Todos von der Datenbank entfernt werden können
         }
     }
 
