@@ -10,11 +10,6 @@ import androidx.room.PrimaryKey
 //        (Werte für taskID sollen von Room automatisch eingetragen werden)
 //      - name (String) : Name des Eintrags
 //      - completed (Boolean) : Ob der Eintrag erledigt wurde oder nicht (Soll Standartmäßig false sein)
-@Entity
 data class Todo(
-    val name: String,
-    val completed: Boolean = false,
-    @PrimaryKey(autoGenerate = true)
-    val taskId: Int = 0
-
+    val placeholder : String // Bitte Platzhalter weg machen
 )
