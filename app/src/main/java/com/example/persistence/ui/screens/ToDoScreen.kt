@@ -123,9 +123,9 @@ fun AllTodos(
 fun AllTodosPreview() {
     AllTodos(
         incompleteEntries = listOf(
-        Todo("incomplete 1", false), Todo("incomplete 2", false)
+        Todo(name = "incomplete 1", completed = false), Todo(name ="incomplete 2", completed = false)
     ), completedEntries = listOf(
-        Todo("complete 1", true), Todo("complete 2", true)
+        Todo(name = "complete 1", completed = true), Todo(name = "complete 2", completed = true)
     ), {}, {})
 }
 
@@ -150,5 +150,5 @@ fun TodoRow(
 @Composable
 @Preview
 fun TodoRowPreview() {
-    TodoRow(Todo("Sample Todo", true, 0), {}) { }
+    TodoRow(Todo(name = "Sample Todo", completed = true), {}) { }
 }
